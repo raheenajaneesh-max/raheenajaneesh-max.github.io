@@ -1,0 +1,189 @@
+/* ==========================================================================
+   Raheena Janeesh - Educational R&D Portfolio
+   Responsive Media Queries (responsive.css)
+   ========================================================================== */
+
+/* Tablet & Smaller Desktops (Max-Width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stat-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .stat-item:nth-child(3), .stat-item:nth-child(4) {
+    border-top: 1px solid var(--border-light);
+    padding-top: 1rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Tablets & Mobile Navigation (Max-Width: 768px) */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 4rem 0;
+  }
+
+  .section-title {
+    font-size: 2.1rem;
+  }
+
+  .hero {
+    padding-top: 7.5rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-title {
+    font-size: 2.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: var(--bg-card);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 6rem 2rem 2rem;
+    gap: 1.5rem;
+    box-shadow: var(--shadow-xl);
+    border-left: 1px solid var(--border-light);
+    transition: right var(--transition-normal);
+    z-index: 999;
+  }
+
+  .nav-menu.open {
+    right: 0;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+  }
+
+  .hero-visual {
+    margin-top: 1rem;
+  }
+
+  .badge-top-right {
+    top: -10px;
+    right: 0px;
+  }
+
+  .badge-bottom-left {
+    bottom: -10px;
+    left: 0px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline::before {
+    left: 15px;
+  }
+
+  .timeline-item {
+    padding-left: 2.75rem;
+  }
+
+  .timeline-dot {
+    left: 5px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .modal-content {
+    padding: 1.75rem;
+    margin: 1rem;
+  }
+}
+
+/* Mobile Screens (Max-Width: 480px) */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 1.15rem;
+  }
+
+  .hero-title {
+    font-size: 2.15rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .stat-item {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 0.75rem;
+  }
+
+  .stat-item:last-child {
+    border-bottom: none;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .badge-top-right, .badge-bottom-left {
+    position: static;
+    margin: 0.5rem auto;
+    display: inline-flex;
+  }
+
+  .hero-card-frame {
+    padding: 1.5rem 1rem;
+  }
+
+  .toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
